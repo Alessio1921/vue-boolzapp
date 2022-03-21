@@ -6,7 +6,7 @@ main header{
   height: 15vh;
 }
 main{
-  background-color: rgb(217,219,214);
+  background-color: rgb(220,219,214);
 }
 .my-header{
   height: 8vh;
@@ -16,8 +16,24 @@ main{
   background-color: rgb(159,216,248);
 }
 .form-chat{
-  height: 10vh;
+  height: 9vh;
+}
+.search{
+  background-color: rgb(250,250,250);
+  height: 6vh;
 }
 #search{
   font-size: .7rem;
+}
+.form-chat .img-profile img{
+  border-radius: 50%;
+  height: 100%;
+}
+.form-chat .img-profile{
+  height: 100%;
+}
+.form-chat .text p,
+.form-chat .hour p{
+  font-size: .7rem;
+  color: lightgray;
 }
