@@ -1,0 +1,23 @@
+body{
+  font-family: 'montserrat', sans-serif;
+}
+main header{
+  background-color: rgb(66,147,135);
+  height: 15vh;
+}
+main{
+  background-color: rgb(217,219,214);
+}
+.my-header{
+  height: 8vh;
+  background-color: rgb(234,234,234);
+}
+.notification{
+  background-color: rgb(159,216,248);
+}
+.form-chat{
+  height: 10vh;
+}
+#search{
+  font-size: .7rem;
+}
