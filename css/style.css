@@ -1,5 +1,10 @@
 body{
   font-family: 'montserrat', sans-serif;
+  overflow: auto;
+}
+i{
+  color: rgb(177,177,177);
+  font-size: 1.2rem;
 }
 main .header{
   background-color: rgb(66,147,135);
@@ -20,16 +25,30 @@ main .container {
 main{
   background-color: rgb(220,219,214);
 }
-
 .my-header{
   height: 8vh;
   background-color: rgb(234,234,234);
+  line-height: 8vh;
+  min-height: 50px;
+}
+.user{
+  height: 100%;
+}
+.description-current-chat{
+  line-height: 2vh;
 }
 .notification{
   background-color: rgb(159,216,248);
 }
+.notification h6{
+  font-size: .8rem;
+}
+.notification span i{
+  color: rgb(159,216,248);
+}
 .form-chat{
-  height: 9vh;
+  height: 8vh;
+  min-height: 50px;
 }
 .search{
   background-color: rgb(250,250,250);
@@ -47,15 +66,33 @@ main{
   height: 100%;
 }
 .form-chat .text p,
-.form-chat .hour p{
+.form-chat .hour p,
+.last-access,
+.message p
+{
   font-size: .7rem;
-  color: lightgray;
+  color: rgb(159	154	162	);
+}
+.container-chat .active{
+  background-color: rgb(233,235,235);
 }
 .current-chat{
   background-image: url("../img/background.jpeg");
   background-position: center;
   background-size: contain;
-  height: calc(100% - 1.7rem);
+  height: 84vh;
+}
+.message{
+  min-width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.message p{
+  bottom: 0;
+  right: 0;
+}
+.chat-user .message{
+  background-color: rgb(220,248,192);
 }
 .new-message{
   padding: 0.2rem;
@@ -69,5 +106,4 @@ main{
 }
 .new-message i{
   color: rgb(109,115,118);
-  font-size: 1.2rem;
 }

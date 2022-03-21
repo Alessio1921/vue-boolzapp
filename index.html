@@ -16,18 +16,49 @@
       <div class="header">
         <div class="container">
           <div class="row mx-5">
-            <div class="col-4 my-header mt-3 border-end border-2 p-0 d-flex">
-              <img class="py-2 ms-2" src="img/avatar_2.jpg" alt="">
-              <p class="my-name">Alessio</p>
+            <div class="col-4 my-header mt-3 border-end border-2 p-0 d-flex justify-content-between">
+              <div class="user d-flex">
+                <img class="py-2 ms-2" src="img/avatar_2.jpg" alt="">
+                <p class="my-name">Alessio</p>
+              </div>
+              <div class="header-button">
+                <i class="fas fa-circle-notch"></i>
+                <i class="fas fa-message mx-2"></i>
+                <i class="fas fa-ellipsis-vertical me-2"></i>
+              </div>
             </div>
-            <div class="col-8 my-header mt-3"></div>
+            <div class="col-8 my-header mt-3 d-flex justify-content-between ">
+              <div class="user d-flex">
+                <img class="py-2 ms-2" src="img/avatar_2.jpg" alt="">
+                <div class="description-current-chat">
+                  <p class="my-name m-0 mt-3">Michele</p>
+                  <p class="m-0 last-access">Ultimo accesso oggi alle 12:00</p>
+                </div>
+              </div>
+              <div class="header-button">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-paperclip mx-3"></i>
+                <i class="fas fa-ellipsis-vertical me-2"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="row mx-5">
           <div class="col-4 p-0">
-            <div class="notification form-chat"></div>
+              <div class="notification form-chat d-flex">
+                <div class="img-profile p-2">
+                  <i class="fas fa-bell-slash p-2 bg-white rounded-circle"></i>
+                </div>
+                <div class="text p-2">
+                  <div>
+                    <h6 class="m-0">Ricevi notifiche di nuovi messaggi</h6>
+                    <p class="m-0">Attiva notifiche desktop </p>
+                  </div>
+                </div>
+              </div>
+            <!-- </div> -->
             <div class="search p-1">
               <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-search"></i></span>
@@ -36,129 +67,132 @@
             </div>
             <!-- start chat -->
             <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+            <div class="container-chat">
+              <div class="form-chat d-flex justify-content-between active">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
+                </div>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
                 </div>
               </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
-              </div>
-            </div>
-            <!-- user -->
-            <div class="form-chat d-flex">
-              <div class="img-profile p-2">
-              <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="text p-2">
-                <div class="name-interlocutor">
-                  <h6 class="m-0">Michele</h6>
-                  <p class="m-0">ultimo messaggio inviato</p>
+              <!-- user -->
+              <div class="form-chat d-flex justify-content-between ">
+                <div class="img-profile p-2 d-flex">
+                  <img src="img/avatar_1.jpg" alt="">
+                  <div class="text p-1">
+                    <h6 class="m-0">Michele</h6>
+                    <p class="m-0">ultimo messaggio inviato</p>
+                  </div>
                 </div>
-              </div>
-              <div class="hour">
-                <p class="m-0 ms-4">12:00</p>
+                <div class="hour">
+                  <p class="m-0 ms-4">12:00</p>
+                </div>
               </div>
             </div>
           </div>
           <!-- start current chat -->
           <div class="col-8 p-0">
-            <div class="current-chat"></div>
+            <div class="current-chat">
+              <div class="chat-user d-flex flex-column align-items-end">
+                <div class="message position-relative me-4 my-2 pe-5">
+                  hai portato a spasso il cane?
+                  <p class="m-0 ms-4 position-absolute ">15:30</p>
+                </div>
+                <div class="message position-relative me-4 pe-5">
+                  ricordati di stendere i panni
+                  <p class="m-0 ms-4 position-absolute ">15:30</p>
+                </div>
+              </div>
+              <div class="chat-interlocutor d-flex flex-column align-items-start">
+                <div class="message position-relative ms-4 my-2 pe-5 bg-white">
+                  Tutto fatto!
+                  <p class="m-0 ms-4 position-absolute ">15:30</p>
+                </div>
+              </div>
+            </div>
             <div class="new-message">
               <div class="input-group">
                 <label class="mt-2 mx-4"  for="inputGrouptext02"><i class="fa-regular fa-face-smile"></i></label>
