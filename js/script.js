@@ -165,7 +165,8 @@ const app= new Vue({
       }
     ],
     indexSelect:0,
-    newMessage:""
+    newMessage:"",
+    search:""
   },
   methods: {
     selectChat(index){
