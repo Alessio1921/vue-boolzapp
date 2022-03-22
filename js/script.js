@@ -163,9 +163,12 @@ const app= new Vue({
           }
         ],
       }
-    ]
+    ],
+    indexSelect:0
   },
   methods: {
-    
+    selectChat(index){
+      this.indexSelect=index;
+    }
   },
 })
