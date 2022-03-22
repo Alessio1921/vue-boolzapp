@@ -62,7 +62,7 @@
             <div class="search p-1">
               <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova ricerca" id="search" v-model="search">
+                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova ricerca" id="search" v-model="search" @keyup="searchChat()">
               </div>
             </div>
             <!-- start chat -->

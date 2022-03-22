@@ -166,7 +166,8 @@ const app= new Vue({
     ],
     indexSelect:0,
     newMessage:"",
-    search:""
+    search:"",
+    contactSearch:[]
   },
   methods: {
     selectChat(index){
@@ -189,6 +190,18 @@ const app= new Vue({
         message:"ok",
         status:'received'
       });
-    }
+    },
+    searchChat(){
+      // if(this.contactSearch.length==0){
+      //   this.contactSearch=this.contacts;
+      // }
+      // else{
+        this.contacts=this.contacts.filter(contact=>{
+          return contact.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      // }
+      
+      // console.log(this.contacts);
+    }, 
   }
 })
