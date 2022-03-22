@@ -164,11 +164,22 @@ const app= new Vue({
         ],
       }
     ],
-    indexSelect:0
+    indexSelect:0,
+    newMessage:""
   },
   methods: {
     selectChat(index){
       this.indexSelect=index;
+    },
+    insertNewMessage(newMessage){
+      if (this.newMessage!=="") {
+        this.contacts[this.indexSelect].messages.push({
+          date:'22/03/2022 12:05:50',
+          message:newMessage,
+          status:'sent'
+        });
+      };
+        this.newMessage=""
     }
-  },
+  }
 })

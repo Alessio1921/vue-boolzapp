@@ -95,7 +95,7 @@
             <div class="new-message">
               <div class="input-group">
                 <label class="mt-2 mx-4"  for="inputGrouptext02"><i class="fa-regular fa-face-smile"></i></label>
-                <input type="text" class="form-control" id="inputGrouptext02" placeholder="Scrivi un messaggio">
+                <input type="text" class="form-control" id="inputGrouptext02" placeholder="Scrivi un messaggio" v-model="newMessage" @keydown.enter="insertNewMessage(newMessage)">
                 <label class="mt-2 mx-4" for="inputGrouptext02"><i class="fa-solid fa-microphone"></i></label>
               </div>
             </div>
