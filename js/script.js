@@ -178,8 +178,16 @@ const app= new Vue({
           message:newMessage,
           status:'sent'
         });
+        setTimeout(() =>this.reply(), 1000);
       };
         this.newMessage=""
+    },
+    reply(){
+      this.contacts[this.indexSelect].messages.push({
+        date:'22/03/2022 12:05:50',
+        message:"ok",
+        status:'received'
+      });
     }
   }
 })
