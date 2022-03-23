@@ -230,5 +230,12 @@ const app= new Vue({
   },
   created() {
     this.contactSearch=this.contacts; 
+    // to remove the date from the arrey
+    this.contacts.forEach(element => {
+      element.messages.forEach(message=>{
+        message.date=message.date.split(" ").slice(1).join().split(":").slice(0,2).join(":");
+        console.log(message.date);
+      })
+    });
   }
 })

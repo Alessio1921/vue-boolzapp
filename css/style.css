@@ -89,7 +89,7 @@ main{
 }
 .message p{
   bottom: 0;
-  right: 0;
+  right: 10px;
 }
 .message span i{
   top: 5px;
