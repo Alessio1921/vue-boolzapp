@@ -71,8 +71,8 @@
             <!-- user -->
             <div class="container-chat">
               <div class="form-chat d-flex justify-content-between" v-for="(contact, index) in contactSearch"  @click="selectChat(index, contact.avatar)" :class="(index==indexSelect) ? 'active' : ''">
-                <div class="img-profile p-2 d-flex">
-                  <img :src="(contact.avatar !== null) ? `img/avatar`+ contact.avatar +`.jpg` : ''" :alt="contact.name+` img`">
+                <div class="img-profile p-2 d-flex" >
+                  <img :src="(contact.avatar !== null) ? `img/avatar`+ contact.avatar +`.jpg` : ''" :alt="contact.name+` img`" v-if="contactSearch[0].avatar!==null">
                   <div class="text p-1">
                     <h6 class="m-0">{{contact.name}}</h6>
                     <p class="m-0" v-if="(contact.avatar !== null)">ultimo messaggio inviato</p>

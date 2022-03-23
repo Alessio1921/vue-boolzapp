@@ -234,7 +234,6 @@ const app= new Vue({
     this.contacts.forEach(element => {
       element.messages.forEach(message=>{
         message.date=message.date.split(" ").slice(1).join().split(":").slice(0,2).join(":");
-        console.log(message.date);
       })
     });
   }
