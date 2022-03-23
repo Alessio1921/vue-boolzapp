@@ -29,7 +29,7 @@
             </div>
             <div class="col-8 my-header mt-3 d-flex justify-content-between ">
               <div class="user d-flex">
-                <img class="py-2 ms-2" :src="`img/avatar`+ contacts[newIndex].avatar +`.jpg`" >
+                <img class="py-2 ms-2" :src="`img/avatar`+ contacts[newIndex].avatar +`.jpg`" :alt="contacts[newIndex].name + ` img`">
                 <div class="description-current-chat">
                   <p class="my-name m-0 mt-3">{{contacts[newIndex].name}}</p>
                   <p class="m-0 last-access">Ultimo accesso oggi alle 12:00</p>
@@ -86,16 +86,15 @@
           <div class="col-8 p-0">
             <div class="current-chat">
               <div class="chat-user d-flex flex-column " v-for="(element, index) in contacts[newIndex].messages" >
-                <div class="message position-relative my-2 pe-5 " :class="(element.status=='sent') ? 'align-self-end me-4' : 'align-self-start  bg-white ms-4'" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" >
+                <div class="message position-relative my-2 pe-5 " :class="(element.status=='sent') ? 'align-self-end me-4' : 'align-self-start  bg-white ms-4'"  >
                   {{element.message}}
                   <p class="m-0 ms-4 position-absolute ">{{element.date}}</p> 
-                  <span><i class="fas fa-chevron-down"></i></span>
+                  <span id="dropdownMenu2"><i class="fas fa-chevron-down position-absolute" @click="option(`dropdown${index}`)" ></i></span>
+                  <ul class="dropdown-menu my-menu" :id="`dropdown`+index" @mouseleave="optionClose(`dropdown${index}`)">
+                    <li><button class="dropdown-item" type="button">Info</button></li>
+                    <li><button class="dropdown-item" type="button" @click="deleteMessage(index)">Delete message</button></li>
+                  </ul>
                 </div>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <li><button class="dropdown-item" type="button">Action</button></li>
-                  <li><button class="dropdown-item" type="button">Another action</button></li>
-                  <li><button class="dropdown-item" type="button">Something else here</button></li>
-                </ul>
               </div>
             </div>
             <div class="new-message">

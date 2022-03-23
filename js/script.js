@@ -169,7 +169,8 @@ const app= new Vue({
     search:"",
     contactSearch:[],
     currentDate: new Date(),
-    newIndex:0
+    newIndex:0,
+    clicked:false
   },
   methods: {
     selectChat(index,avatar){
@@ -208,9 +209,24 @@ const app= new Vue({
           name:"nessun risultato",
           avatar:null,
         })
-        console.log("ciao");
       }
     }, 
+    option(idDropdown){
+      if (this.clicked==false) {
+        document.getElementById(idDropdown).classList.add("d-block");      
+      }
+      else{
+        this.optionClose;     
+      }
+      this.clicked=!this.clicked;
+    },
+    optionClose(idDropdown){
+      document.getElementById(idDropdown).classList.remove("d-block");      
+    },
+    deleteMessage(index){
+      this.contacts[this.newIndex].messages.splice(index, 1)
+      // console.log(this.contacts[this.newIndex].messages[index].message);
+    },
   },
   created() {
     this.contactSearch=this.contacts; 

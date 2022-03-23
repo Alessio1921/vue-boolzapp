@@ -91,6 +91,11 @@ main{
   bottom: 0;
   right: 0;
 }
+.message span i{
+  top: 5px;
+  right: 5px;
+  font-size: 0.9rem;
+}
 .chat-user .message{
   background-color: rgb(220,248,192);
 }
@@ -106,4 +111,7 @@ main{
 }
 .new-message i{
   color: rgb(109,115,118);
+}
+.my-menu{
+  right: 0;
 }
