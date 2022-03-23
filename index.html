@@ -29,9 +29,9 @@
             </div>
             <div class="col-8 my-header mt-3 d-flex justify-content-between ">
               <div class="user d-flex">
-                <img class="py-2 ms-2" :src="`img/avatar`+ contacts[indexSelect].avatar +`.jpg`" :alt="contacts[indexSelect].name + ` img`">
+                <img class="py-2 ms-2" :src="`img/avatar`+ contacts[newIndex].avatar +`.jpg`" >
                 <div class="description-current-chat">
-                  <p class="my-name m-0 mt-3">{{contacts[indexSelect].name}}</p>
+                  <p class="my-name m-0 mt-3">{{contacts[newIndex].name}}</p>
                   <p class="m-0 last-access">Ultimo accesso oggi alle 12:00</p>
                 </div>
               </div>
@@ -68,12 +68,12 @@
             <!-- start chat -->
             <!-- user -->
             <div class="container-chat">
-              <div class="form-chat d-flex justify-content-between" v-for="(contact, index) in contacts"  @click="selectChat(index)" :class="(index==indexSelect) ? 'active' : ''">
+              <div class="form-chat d-flex justify-content-between" v-for="(contact, index) in contactSearch"  @click="selectChat(index, contact.avatar)" :class="(index==indexSelect) ? 'active' : ''">
                 <div class="img-profile p-2 d-flex">
-                  <img :src="`img/avatar`+ contact.avatar +`.jpg`" :alt="contact.name+` img`">
+                  <img :src="(contact.avatar !== null) ? `img/avatar`+ contact.avatar +`.jpg` : ''" :alt="contact.name+` img`">
                   <div class="text p-1">
                     <h6 class="m-0">{{contact.name}}</h6>
-                    <p class="m-0">ultimo messaggio inviato</p>
+                    <p class="m-0" v-if="(contact.avatar !== null)">ultimo messaggio inviato</p>
                   </div>
                 </div>
                 <div class="hour">
@@ -85,11 +85,17 @@
           <!-- start current chat -->
           <div class="col-8 p-0">
             <div class="current-chat">
-              <div class="chat-user d-flex flex-column " v-for="(element, index) in contacts[indexSelect].messages" >
-                <div class="message position-relative my-2 pe-5 " :class="(element.status=='sent') ? 'align-self-end me-4' : 'align-self-start  bg-white ms-4'" >
+              <div class="chat-user d-flex flex-column " v-for="(element, index) in contacts[newIndex].messages" >
+                <div class="message position-relative my-2 pe-5 " :class="(element.status=='sent') ? 'align-self-end me-4' : 'align-self-start  bg-white ms-4'" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" >
                   {{element.message}}
                   <p class="m-0 ms-4 position-absolute ">{{element.date}}</p> 
+                  <span><i class="fas fa-chevron-down"></i></span>
                 </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
               </div>
             </div>
             <div class="new-message">
@@ -103,6 +109,8 @@
           </div>
         </div>
     </main>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/locale/zh-cn.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

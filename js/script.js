@@ -167,16 +167,24 @@ const app= new Vue({
     indexSelect:0,
     newMessage:"",
     search:"",
-    contactSearch:[]
+    contactSearch:[],
+    currentDate: new Date(),
+    newIndex:0
   },
   methods: {
-    selectChat(index){
-      this.indexSelect=index;
+    selectChat(index,avatar){
+      this.indexSelect=index
+      for (let i = 0; i < this.contacts.length; i++) {
+        if(this.contacts[i].avatar==avatar)
+        {
+          this.newIndex=i;
+        }
+      }
     },
     insertNewMessage(newMessage){
       if (this.newMessage!=="") {
-        this.contacts[this.indexSelect].messages.push({
-          date:'22/03/2022 12:05:50',
+        this.contacts[this.newIndex].messages.push({
+          date:this.currentDate.getHours() + ":" + this.currentDate.getMinutes(),
           message:newMessage,
           status:'sent'
         });
@@ -185,23 +193,26 @@ const app= new Vue({
         this.newMessage=""
     },
     reply(){
-      this.contacts[this.indexSelect].messages.push({
-        date:'22/03/2022 12:05:50',
+      this.contacts[this.newIndex].messages.push({
+        date:this.currentDate.getHours() + ":" + this.currentDate.getMinutes(),
         message:"ok",
         status:'received'
       });
     },
     searchChat(){
-      // if(this.contactSearch.length==0){
-      //   this.contactSearch=this.contacts;
-      // }
-      // else{
-        this.contacts=this.contacts.filter(contact=>{
-          return contact.name.toLowerCase().includes(this.search.toLowerCase())
+      this.contactSearch=this.contacts.filter(contact=>{
+        return contact.name.toLowerCase().includes(this.search.toLowerCase())
+      }) 
+      if(this.contactSearch.length==0){
+        this.contactSearch.push({
+          name:"nessun risultato",
+          avatar:null,
         })
-      // }
-      
-      // console.log(this.contacts);
+        console.log("ciao");
+      }
     }, 
+  },
+  created() {
+    this.contactSearch=this.contacts; 
   }
 })
