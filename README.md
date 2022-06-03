@@ -1,6 +1,7 @@
 # vue-boolzapp
 
 Functionality:
+
 When you click on a chat, the contact details and the respective chat are displayed.
 If you send a message to a contact, they will reply "ok" after a second.
 sent and received messages will have the current time.
