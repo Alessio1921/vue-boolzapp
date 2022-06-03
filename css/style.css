@@ -18,9 +18,10 @@ main .header .container{
 }
 main .container {
   position: absolute;
-  top: 10vh;
+  top: 9.5vh;
   left: 50%;
   transform: translateX(-50%);
+  min-width: 700px;
 }
 main{
   background-color: rgb(220,219,214);
@@ -34,84 +35,89 @@ main{
 .user{
   height: 100%;
 }
-.description-current-chat{
-  line-height: 2vh;
-}
-.notification{
-  background-color: rgb(159,216,248);
-}
-.notification h6{
-  font-size: .8rem;
-}
-.notification span i{
-  color: rgb(159,216,248);
-}
-.form-chat{
-  height: 8vh;
-  min-height: 50px;
-}
-.search{
-  background-color: rgb(250,250,250);
-  height: 6vh;
-}
-#search{
-  font-size: .7rem;
-}
-.form-chat .img-profile img ,
-.my-header img{
-  border-radius: 50%;
-  height: 100%;
-}
-.form-chat .img-profile{
-  height: 100%;
-}
-.form-chat .text p,
-.form-chat .hour p,
-.last-access,
-.message p
-{
-  font-size: .7rem;
-  color: rgb(159	154	162	);
-}
-.container-chat .active{
-  background-color: rgb(233,235,235);
-}
-.current-chat{
-  background-image: url("../img/background.jpeg");
-  background-position: center;
-  background-size: contain;
-  height: 84vh;
-}
-.message{
-  min-width: 30%;
-  border-radius: 10px;
-  padding: 10px;
-}
-.message p{
-  bottom: 0;
-  right: 10px;
-}
-.message span i{
-  top: 5px;
-  right: 5px;
-  font-size: 0.9rem;
-}
-.chat-user .message{
-  background-color: rgb(220,248,192);
-}
-.new-message{
-  padding: 0.2rem;
-  background-color: rgb(242,238,234);
-}
-.new-message #inputGrouptext02{
-  margin: 0.2rem;
-  border-radius: 5px;
-  border: none;
-  font-size: 0.8rem;
-}
-.new-message i{
-  color: rgb(109,115,118);
-}
-.my-menu{
-  right: 0;
-}
+/* left part */
+  .notification{
+    background-color: rgb(159,216,248);
+  }
+  .notification h6{
+    font-size: .8rem;
+  }
+  .notification span i{
+    color: rgb(159,216,248);
+  }
+  .form-chat{
+    height: 8vh;
+    min-height: 50px;
+  }
+  .search{
+    background-color: rgb(250,250,250);
+    height: 6vh;
+  }
+  #search{
+    font-size: .7rem;
+  }
+  .form-chat .img-profile img ,
+  .my-header img{
+    border-radius: 50%;
+    height: 100%;
+  }
+  .form-chat .img-profile{
+    height: 100%;
+  }
+  .form-chat .text p,
+  .form-chat .hour p,
+  .last-access,
+  .message p
+  {
+    font-size: .7rem;
+    color: rgb(159	154	162	);
+  }
+  .container-chat .active{
+    background-color: rgb(233,235,235);
+  }
+
+/* end left */
+/* right part*/
+  .description-current-chat{
+    line-height: 2vh;
+  }
+  .current-chat{
+    background-image: url("../img/background.jpeg");
+    background-position: center;
+    background-size: contain;
+    height: 84vh;
+  }
+  .message{
+    min-width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .message p{
+    bottom: 0;
+    right: 10px;
+  }
+  .message span i{
+    top: 5px;
+    right: 5px;
+    font-size: 0.9rem;
+  }
+  .chat-user .message{
+    background-color: rgb(220,248,192);
+  }
+  .new-message{
+    padding: 0.2rem;
+    background-color: rgb(242,238,234);
+  }
+  .new-message #inputGrouptext02{
+    margin: 0.2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8rem;
+  }
+  .new-message i{
+    color: rgb(109,115,118);
+  }
+  .my-menu{
+    right: 0;
+  }
+/* end right */
